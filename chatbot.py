@@ -10,7 +10,7 @@ def farewell():
 
 def provide_info(topic):
     info = {
-        "weather": "The weather is currently sunny and 25°C.",
+        "weather": "The weather is currently good if you want to know more just open the window of your room.",
         "time": "Your system has watch check it.",
         "news": "Here are the latest headlines... ",
         "age": "I'm just a bot, so I don't have an age, but if you're asking for my version, it's 2.",
