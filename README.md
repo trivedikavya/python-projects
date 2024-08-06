@@ -9,6 +9,6 @@
 #### Python
 
 ```python
-just an example
+just an example i can use this as show case 
 ```
 
