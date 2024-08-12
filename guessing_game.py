@@ -1,3 +1,8 @@
-SOON
-classes and then simple logic 
-practicing bro 
+
+class atm {
+
+  def (self){
+  
+}
+
+}
