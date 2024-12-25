@@ -1,7 +1,7 @@
 <h1> PYTHON PROJECTS OUTPUT</h1> 
 <H2> 1] CHAT-BOT </H2> <br>
 
-#### Python
+#### OUTPUT
 
 ```python
 Bot: Hello!
@@ -29,7 +29,7 @@ Bot: You can contact Kavya Trivedi on Instagram: @kavyatrivedi.og or on GitHub: 
 
 
 
-#### Python
+#### OUTPUT
 
 ```python
 INPUTS:- 
