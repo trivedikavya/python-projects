@@ -20,6 +20,7 @@ Bot: I'm just a bot, I don't have feelings, but thanks for asking!
 You: your owner contact information
 Bot: My owner is KAVYA TRIVEDI.
 You: yeah but its contact information
+Bot: You can contact Kavya Trivedi on Instagram: @kavyatrivedi.og or on GitHub: trivedikavya
 ```
 
 
