@@ -1,8 +1,7 @@
 <h1> PYTHON PROJECTS OUTPUT</h1> 
 <H2> 1] CHAT-BOT </H2> <br>
 ```python
-bot:
-```
+bot:-
 
 
     ```
