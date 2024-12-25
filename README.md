@@ -11,6 +11,7 @@ You: your owner is
 Bot: My owner is KAVYA TRIVEDI.
 You: what time it is
 Bot: Your system has watch check it.
+You: your age
 ```
 
 
