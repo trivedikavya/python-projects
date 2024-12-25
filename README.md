@@ -9,6 +9,7 @@ You: what is your name
 Bot: I'm ChatBot K-1.1.
 You: your owner is
 Bot: My owner is KAVYA TRIVEDI.
+You: what time it is
 
 ```
 
