@@ -7,6 +7,7 @@
 Bot: Hello!
 You: what is your name
 Bot: I'm ChatBot K-1.1.
+You: your owner is
 
 
 ```
