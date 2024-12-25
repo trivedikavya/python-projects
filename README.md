@@ -17,6 +17,7 @@ You: how the weather today
 Bot: The weather is currently good if you want to know more just open the window of your room.
 You: how are you
 Bot: I'm just a bot, I don't have feelings, but thanks for asking!
+You: your owner contact information
 ```
 
 
