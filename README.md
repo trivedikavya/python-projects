@@ -24,11 +24,6 @@ Bot: You can contact Kavya Trivedi on Instagram: @kavyatrivedi.og or on GitHub: 
 ```
 
 
-
-
-
-
-
 #### OUTPUT
 
 ```python
@@ -65,3 +60,35 @@ Unfortunately, you are not eligible for the loan at this time.
 
 ```
 
+```python
+INPUTS:- 
+Welcome to the Personal Expense Prediction Assistant!
+
+Enter your total monthly income: 50000
+
+Now, enter your monthly expenses for the following categories:
+Rent: 15000
+Groceries: 8000
+Utilities: 5000
+Entertainment: 2000
+Other expenses: 3000
+
+
+OUTPUTS:-
+===== Expense Summary =====
+Monthly Income: $50000.00
+
+Expenses Breakdown:
+  Rent: $15000.00
+  Groceries: $8000.00
+  Utilities: $5000.00
+  Entertainment: $2000.00
+  Others: $3000.00
+
+Total Expenses: $33000.00
+Remaining Income: $17000.00
+
+Suggestions:
+  - You have a healthy balance. Keep up the good financial habits!
+
+```
