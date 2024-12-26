@@ -1,6 +1,6 @@
 <h1> PYTHON PROJECTS OUTPUT</h1> 
 
-## 1 Chat-Bot OUTPUT
+## 1 Chat-Bot 
 
 ```python
 Bot: Hello!
@@ -23,7 +23,7 @@ Bot: You can contact Kavya Trivedi on Instagram: @kavyatrivedi.og or on GitHub: 
 ```
 
 
-#### OUTPUT
+## 2 Loan Eligibility Predictor
 
 ```python
 INPUTS:- 
