@@ -59,6 +59,8 @@ Unfortunately, you are not eligible for the loan at this time.
 
 ```
 
+## 3 Personal Expense Prediction Assistant
+
 ```python
 INPUTS:- 
 Welcome to the Personal Expense Prediction Assistant!
