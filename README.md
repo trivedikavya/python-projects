@@ -1,4 +1,4 @@
-<h1> PYTHON PROJECTS OUTPUT</h1> 
+<h1> PYTHON PROJECTS OUTPUTS</h1> 
 
 ## 1 Chat-Bot 
 
