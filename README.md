@@ -9,7 +9,7 @@ Bot: I'm ChatBot K-1.1.
 You: your owner is
 Bot: My owner is KAVYA TRIVEDI.
 You: what time it is
-Bot: Your system has watch check it.
+Bot: Your system has watch plz check there .
 You: your age
 Bot: I'm just a bot, so I don't have an age, but if you're asking for my version, it's 2.
 You: how's the weather today
@@ -21,6 +21,14 @@ You: your owner contact information
 Bot: My owner is KAVYA TRIVEDI.
 You: yeah but its contact information
 Bot: You can contact Kavya Trivedi on Instagram: @kavyatrivedi.og or on GitHub: trivedikavya
+You: How many girls are there in your staff
+Bot: All are married brother
+You: how to start investing
+Bot: For that you need money for that
+you have to earn
+You: ohk so how can I earn money
+Bot: for that you need skills rather then
+HTML ,CSS , js 
 ```
 
 
