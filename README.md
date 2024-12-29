@@ -24,11 +24,7 @@ Bot: You can contact Kavya Trivedi on Instagram: @kavyatrivedi.og or on GitHub: 
 You: How many girls are there in your staff
 Bot: All are married brother
 You: how to start investing
-Bot: For that you need money for that
-you have to earn
-You: ohk so how can I earn money
-Bot: for that you need skills rather then
-HTML ,CSS , js 
+Bot: For that you need money 
 ```
 
 
