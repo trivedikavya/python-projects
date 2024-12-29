@@ -12,7 +12,7 @@ You: what time it is
 Bot: Your system has watch check it.
 You: your age
 Bot: I'm just a bot, so I don't have an age, but if you're asking for my version, it's 2.
-You: how the weather today
+You: how's the weather today
 Bot: The weather is currently good if you want to know more just open the window of your room.
 You: how are you
 Bot: I'm just a bot, I don't have feelings, but thanks for asking!
