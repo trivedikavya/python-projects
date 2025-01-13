@@ -1,0 +1,159 @@
+import datetime
+import random
+import hashlib
+
+# Simulated database for the platform
+database = {
+    "users": [],
+    "donations": [],
+    "notifications": [],
+    "rewards": {},
+    "leaderboard": {},
+}
+
+# Blockchain implementation for transparency
+class Blockchain:
+    def __init__(self):
+        self.chain = []
+        self.create_block(previous_hash='0')
+
+    def create_block(self, data=None, previous_hash='0'):
+        block = {
+            'index': len(self.chain) + 1,
+            'timestamp': str(datetime.datetime.now()),
+            'data': data or {},
+            'previous_hash': previous_hash,
+            'hash': self.hash_block(data, previous_hash)
+        }
+        self.chain.append(block)
+        return block
+
+    def hash_block(self, data, previous_hash):
+        content = f"{data}{previous_hash}{datetime.datetime.now()}"
+        return hashlib.sha256(content.encode()).hexdigest()
+
+blockchain = Blockchain()
+
+# Helper functions
+def get_user_role():
+    print("\nSelect Your Role:")
+    print("1. Donor")
+    print("2. NGO")
+    print("3. Volunteer")
+    print("4. Admin")
+    return int(input("Enter your choice: "))
+
+def create_account():
+    name = input("Enter your name: ")
+    email = input("Enter your email: ")
+    password = input("Set your password: ")
+    role = get_user_role()
+    user = {"name": name, "email": email, "password": password, "role": role}
+    database["users"].append(user)
+    print("Account created successfully!")
+
+def login():
+    email = input("Enter your email: ")
+    password = input("Enter your password: ")
+    for user in database["users"]:
+        if user["email"] == email and user["password"] == password:
+            print(f"Welcome back, {user['name']}!")
+            return user
+    print("Invalid credentials. Please try again.")
+    return None
+
+def add_donation(user):
+    print("\nAdd Donation")
+    food_item = input("Enter the food item: ")
+    quantity = input("Enter the quantity: ")
+    expiry_date = input("Enter the expiry date (YYYY-MM-DD): ")
+    donation = {
+        "donor": user["name"],
+        "food_item": food_item,
+        "quantity": quantity,
+        "expiry_date": expiry_date,
+        "timestamp": str(datetime.datetime.now()),
+    }
+    database["donations"].append(donation)
+    blockchain.create_block(data=donation)
+    print("Donation added successfully!")
+
+def view_donations():
+    print("\nCurrent Donations")
+    for idx, donation in enumerate(database["donations"], start=1):
+        print(f"{idx}. {donation['food_item']} - {donation['quantity']} (Expires: {donation['expiry_date']})")
+
+def view_notifications(user):
+    print("\nYour Notifications")
+    for notification in database["notifications"]:
+        if notification["recipient"] == user["name"] or notification["recipient"] == "All":
+            print(f"- {notification['message']}")
+
+def add_reward(user):
+    database["rewards"].setdefault(user["name"], 0)
+    database["rewards"][user["name"]] += random.randint(10, 50)
+    print(f"Reward points added! Current points: {database['rewards'][user['name']]}")
+
+def view_leaderboard():
+    print("\nLeaderboard")
+    sorted_leaderboard = sorted(database["rewards"].items(), key=lambda x: x[1], reverse=True)
+    for idx, (user, points) in enumerate(sorted_leaderboard, start=1):
+        print(f"{idx}. {user} - {points} points")
+
+def crisis_mode():
+    print("\nCrisis Mode Activated!")
+    database["notifications"].append({"recipient": "All", "message": "Crisis Mode is now active! Prioritize urgent donations."})
+
+def dashboard(user):
+    while True:
+        print("\nDashboard")
+        print("1. Add Donation")
+        print("2. View Donations")
+        print("3. View Notifications")
+        print("4. View Rewards")
+        print("5. View Leaderboard")
+        if user["role"] == 4:  # Admin
+            print("6. Activate Crisis Mode")
+        print("0. Logout")
+        choice = int(input("Enter your choice: "))
+
+        if choice == 1:
+            add_donation(user)
+        elif choice == 2:
+            view_donations()
+        elif choice == 3:
+            view_notifications(user)
+        elif choice == 4:
+            print(f"Your current reward points: {database['rewards'].get(user['name'], 0)}")
+        elif choice == 5:
+            view_leaderboard()
+        elif choice == 6 and user["role"] == 4:
+            crisis_mode()
+        elif choice == 0:
+            print("Logging out...")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+def main():
+    while True:
+        print("\nWelcome to the Food Redistribution Platform")
+        print("1. Login")
+        print("2. Create Account")
+        print("0. Exit")
+        choice = int(input("Enter your choice: "))
+
+        if choice == 1:
+            user = login()
+            if user:
+                dashboard(user)
+        elif choice == 2:
+            create_account()
+        elif choice == 0:
+            print("Thank you for using the platform. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
