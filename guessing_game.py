@@ -1,8 +1,1 @@
 
-class atm {
-
-  def (self){
-  
-}
-
-}
